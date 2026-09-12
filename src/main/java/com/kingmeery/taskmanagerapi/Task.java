@@ -1,9 +1,11 @@
 package com.kingmeery.taskmanagerapi;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 @Entity
 public class Task {
@@ -20,6 +22,7 @@ public class Task {
     public Task() {
     }
 
+    @Schema(accessMode = Schema.AccessMode.READ_ONLY)
     public Long getId() {
         return id;
     }
